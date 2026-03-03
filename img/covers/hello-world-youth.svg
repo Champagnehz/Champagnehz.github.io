@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1026"/>
+      <stop offset="0.45" stop-color="#1A2B6B"/>
+      <stop offset="1" stop-color="#FF7AA2"/>
+    </linearGradient>
+
+    <radialGradient id="sun" cx="70%" cy="30%" r="55%">
+      <stop offset="0" stop-color="#FFE9A6" stop-opacity="0.95"/>
+      <stop offset="0.25" stop-color="#FFB86B" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFB86B" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#63FFB8"/>
+      <stop offset="0.5" stop-color="#39D5FF"/>
+      <stop offset="1" stop-color="#8A7BFF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.55 0" result="g"/>
+      <feMerge>
+        <feMergeNode in="g"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="stars" width="180" height="180" patternUnits="userSpaceOnUse">
+      <circle cx="18" cy="26" r="1.6" fill="#EAF6FF" opacity="0.55"/>
+      <circle cx="96" cy="40" r="1.2" fill="#EAF6FF" opacity="0.35"/>
+      <circle cx="150" cy="88" r="1.4" fill="#EAF6FF" opacity="0.40"/>
+      <circle cx="44" cy="120" r="1.1" fill="#EAF6FF" opacity="0.30"/>
+      <circle cx="132" cy="146" r="1.7" fill="#EAF6FF" opacity="0.50"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#sun)"/>
+  <rect width="1600" height="900" fill="url(#stars)" opacity="0.55"/>
+
+  <g opacity="0.35">
+    <path d="M0 640 C 240 580, 420 700, 690 640 S 1160 560, 1600 610" fill="none" stroke="#EAF6FF" stroke-opacity="0.25" stroke-width="2"/>
+    <path d="M0 700 C 260 620, 520 780, 760 705 S 1220 560, 1600 660" fill="none" stroke="#EAF6FF" stroke-opacity="0.18" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <path d="M120 700 C 420 520, 720 540, 980 420 S 1400 220, 1520 140" fill="none" stroke="url(#neon)" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+
+    <g opacity="0.95">
+      <circle cx="220" cy="640" r="10" fill="#63FFB8"/>
+      <circle cx="520" cy="560" r="10" fill="#39D5FF"/>
+      <circle cx="820" cy="540" r="10" fill="#8A7BFF"/>
+      <circle cx="1080" cy="420" r="10" fill="#63FFB8"/>
+      <circle cx="1340" cy="260" r="10" fill="#39D5FF"/>
+      <circle cx="1500" cy="150" r="10" fill="#8A7BFF"/>
+    </g>
+
+    <g stroke="#EAF6FF" stroke-opacity="0.18" stroke-width="1">
+      <line x1="220" y1="640" x2="520" y2="560"/>
+      <line x1="520" y1="560" x2="820" y2="540"/>
+      <line x1="820" y1="540" x2="1080" y2="420"/>
+      <line x1="1080" y1="420" x2="1340" y2="260"/>
+      <line x1="1340" y1="260" x2="1500" y2="150"/>
+    </g>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" fill="#FFFFFF">
+    <text x="96" y="170" font-size="64" font-weight="900" letter-spacing="0.8">Hello World</text>
+    <text x="96" y="224" font-size="22" opacity="0.88">The New Start · Youth Vibes · Keep Moving Forward</text>
+
+    <rect x="96" y="262" width="520" height="6" rx="3" fill="url(#neon)" opacity="0.95"/>
+
+    <g opacity="0.86" font-size="18">
+      <text x="96" y="318">Start writing. Start building. Start shipping.</text>
+      <text x="96" y="348">记录成长 · 保持热爱 · 少年气</text>
+    </g>
+  </g>
+
+  <g opacity="0.55" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1">
+    <path d="M70 70 H1530"/>
+    <path d="M70 830 H1530"/>
+    <path d="M70 70 V830" opacity="0.85"/>
+    <path d="M1530 70 V830" opacity="0.85"/>
+  </g>
+</svg>

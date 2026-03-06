@@ -1,0 +1,145 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cpuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gpuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="memGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="url(#bg)"/>
+  
+  <!-- Grid pattern -->
+  <g opacity="0.1">
+    <path d="M0 50h800M0 100h800M0 150h800M0 200h800M0 250h800M0 300h800M0 350h800M50 0v400M150 0v400M250 0v400M350 0v400M450 0v400M550 0v400M650 0v400M750 0v400" stroke="#60a5fa" stroke-width="0.5"/>
+  </g>
+  
+  <!-- CPU Icon -->
+  <g transform="translate(100, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="8" fill="url(#cpuGrad)" opacity="0.9"/>
+    <rect x="-30" y="-30" width="60" height="60" rx="4" fill="#1e293b"/>
+    <g opacity="0.8">
+      <rect x="-20" y="-20" width="8" height="8" fill="#60a5fa"/>
+      <rect x="-5" y="-20" width="8" height="8" fill="#60a5fa"/>
+      <rect x="10" y="-20" width="8" height="8" fill="#60a5fa"/>
+      <rect x="-20" y="-5" width="8" height="8" fill="#60a5fa"/>
+      <rect x="-5" y="-5" width="8" height="8" fill="#60a5fa"/>
+      <rect x="10" y="-5" width="8" height="8" fill="#60a5fa"/>
+      <rect x="-20" y="10" width="8" height="8" fill="#60a5fa"/>
+      <rect x="-5" y="10" width="8" height="8" fill="#60a5fa"/>
+      <rect x="10" y="10" width="8" height="8" fill="#60a5fa"/>
+    </g>
+    <text x="0" y="60" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">CPU</text>
+  </g>
+  
+  <!-- GPU Icon -->
+  <g transform="translate(250, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="8" fill="url(#gpuGrad)" opacity="0.9"/>
+    <rect x="-30" y="-30" width="60" height="60" rx="4" fill="#1e293b"/>
+    <g opacity="0.8">
+      <rect x="-20" y="-15" width="40" height="25" rx="2" fill="#34d399"/>
+      <rect x="-15" y="15" width="30" height="8" rx="1" fill="#34d399"/>
+      <circle cx="-10" cy="-5" r="3" fill="#1e293b"/>
+      <circle cx="0" cy="-5" r="3" fill="#1e293b"/>
+      <circle cx="10" cy="-5" r="3" fill="#1e293b"/>
+    </g>
+    <text x="0" y="60" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">GPU</text>
+  </g>
+  
+  <!-- Memory Icon -->
+  <g transform="translate(400, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="8" fill="url(#memGrad)" opacity="0.9"/>
+    <rect x="-30" y="-30" width="60" height="60" rx="4" fill="#1e293b"/>
+    <g opacity="0.8">
+      <rect x="-20" y="-20" width="8" height="40" rx="1" fill="#fbbf24"/>
+      <rect x="-8" y="-20" width="8" height="40" rx="1" fill="#fbbf24"/>
+      <rect x="4" y="-20" width="8" height="40" rx="1" fill="#fbbf24"/>
+      <rect x="16" y="-20" width="8" height="40" rx="1" fill="#fbbf24"/>
+    </g>
+    <text x="0" y="60" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">RAM</text>
+  </g>
+  
+  <!-- Storage Icon -->
+  <g transform="translate(550, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="8" fill="#8b5cf6" opacity="0.9"/>
+    <rect x="-30" y="-30" width="60" height="60" rx="4" fill="#1e293b"/>
+    <g opacity="0.8">
+      <ellipse cx="0" cy="-5" rx="25" ry="8" fill="#a78bfa"/>
+      <rect x="-25" y="-5" width="50" height="30" fill="#a78bfa"/>
+      <ellipse cx="0" cy="25" rx="25" ry="8" fill="#a78bfa"/>
+    </g>
+    <text x="0" y="60" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="12">STORAGE</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <g stroke="#60a5fa" stroke-width="2" opacity="0.3" fill="none">
+    <path d="M140 150 Q195 120 210 150"/>
+    <path d="M290 150 Q345 120 360 150"/>
+    <path d="M440 150 Q495 120 510 150"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="400" y="50" text-anchor="middle" fill="url(#textGrad)" font-family="Arial, sans-serif" font-size="32" font-weight="bold" filter="url(#glow)">LLM FIT</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="80" text-anchor="middle" fill="#94a3b8" font-family="Arial, sans-serif" font-size="14">检测你的电脑适合什么模型</text>
+  
+  <!-- Model size indicators -->
+  <g transform="translate(100, 280)">
+    <rect x="0" y="0" width="120" height="30" rx="15" fill="#3b82f6" opacity="0.2"/>
+    <text x="60" y="20" text-anchor="middle" fill="#60a5fa" font-family="Arial, sans-serif" font-size="11">1B-3B Models</text>
+  </g>
+  
+  <g transform="translate(250, 280)">
+    <rect x="0" y="0" width="120" height="30" rx="15" fill="#10b981" opacity="0.2"/>
+    <text x="60" y="20" text-anchor="middle" fill="#34d399" font-family="Arial, sans-serif" font-size="11">3B-7B Models</text>
+  </g>
+  
+  <g transform="translate(400, 280)">
+    <rect x="0" y="0" width="120" height="30" rx="15" fill="#f59e0b" opacity="0.2"/>
+    <text x="60" y="20" text-anchor="middle" fill="#fbbf24" font-family="Arial, sans-serif" font-size="11">7B-13B Models</text>
+  </g>
+  
+  <g transform="translate(550, 280)">
+    <rect x="0" y="0" width="120" height="30" rx="15" fill="#8b5cf6" opacity="0.2"/>
+    <text x="60" y="20" text-anchor="middle" fill="#a78bfa" font-family="Arial, sans-serif" font-size="11">13B+ Models</text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.3">
+    <circle cx="700" cy="100" r="3" fill="#60a5fa"/>
+    <circle cx="720" cy="120" r="2" fill="#34d399"/>
+    <circle cx="680" cy="130" r="2" fill="#fbbf24"/>
+    <circle cx="100" cy="80" r="2" fill="#a78bfa"/>
+    <circle cx="120" cy="60" r="3" fill="#60a5fa"/>
+    <circle cx="80" cy="70" r="2" fill="#34d399"/>
+  </g>
+  
+  <!-- Bottom tech pattern -->
+  <g opacity="0.1">
+    <path d="M0 380h800M50 360v20M150 360v20M250 360v20M350 360v20M450 360v20M550 360v20M650 360v20M750 360v20" stroke="#60a5fa" stroke-width="0.5"/>
+  </g>
+</svg>
